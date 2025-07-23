@@ -5,14 +5,6 @@
   --primary-contrast-light: #fff;
   --primary-contrast-dark: #111;
 
-  --secondary: #e11d48;         /* Vermelho principal */
-  --secondary-light: #fb7185;   /* Vermelho claro */
-  --secondary-dark: #9f1239;    /* Vermelho escuro */
-
-  --accent: #f59e42;            /* Laranja para destaque */
-  --accent-light: #fde68a;
-  --accent-dark: #b45309;
-
   --gray-100: #f8f9fa;
   --gray-200: #e9ecef;
   --gray-300: #dee2e6;
