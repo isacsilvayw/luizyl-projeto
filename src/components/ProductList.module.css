@@ -9,7 +9,7 @@
 .productList {
   padding: 1rem 3rem;
   display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-template-rows: repeat(auto-fit, min-content);
+  gap: 3rem; /* 4rem entre linhas, 2rem entre colunas */
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); /* cards um pouco maiores */
+  grid-template-rows: auto;
 }
