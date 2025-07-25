@@ -1,5 +1,5 @@
 .productCard {
-  border: 0.25rem solid var(--primary);
+  border: 0.25rem solid rgb(207, 207, 207);
   border-radius: 5rem;
   padding: 2rem;
   text-align: center;
@@ -12,14 +12,14 @@
 }
 
 .productTitle {
-  font-size: 3rem;
+  font-size: 2.87rem;
   font-weight: bold;
   margin: 0.5rem 0;
 }
 
 .productDescription {
-  font-size: 2rem;
-  color: var(--primary-dark);
+  font-size: 1.72rem;
+  color: var(--primary-contrast-dark);
 }
 
 .productPrice {
@@ -32,12 +32,12 @@
   background-color: var(--primary);
   color: var(--gray-900);
   border: none;
-  padding: 1rem 2rem;
+  padding: 1.22rem 2rem;
   border-radius: 1rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.85rem;
 }
 
 .productButton:hover {
-  background-color: var(--primary-dark);
+  background-color: rgb(131, 48, 48);
 }

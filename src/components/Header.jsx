@@ -9,11 +9,15 @@ export function Header() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.containerImg}>
+        {/* ícone/esquerda */}
+      </div>
       <Link to="/" className={styles.link}>
         <h1>TJA Megastore</h1>
       </Link>
-      <Link to="/cart" className={styles.link}>
-        <div className={styles.cartInfo}>
+      <div className={styles.cartInfo}>
+        <Link to="/cart" className={styles.link}>
+          {/* ícone da loja/direita */}
           <ShoppingBasket size={32} />
           <p>
             Total: ${" "}
@@ -24,8 +28,8 @@ export function Header() {
               )
               .toFixed(2)}
           </p>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -7,6 +7,28 @@ import { Cart } from "./components/Cart";
 import { CartProvider } from "./service/CartContext";
 
 export default function App() {
+  
+  const [cart, setCart] = useState([]);
+
+  function addToCart(product) {
+    setCart((prevCart) => [...prevCart, product]);
+  }
+
+  function updateQuantity(id, quantity) {
+    setCart(cart =>
+      cart.map(item =>
+        item.id === id ? { ...item, quantity: Math.max(1, quantity) } : item
+      )
+    );
+  }
+
+  function removeFromCart(id) {
+    setCart(cart => cart.filter(item => item.id !== id));
+  }
+
+  function clearCart() {
+    setCart([]);
+  }
 
   return (
     <>
@@ -17,7 +39,18 @@ export default function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </CartProvider>
+      <Header cart={cart} />
+      <Routes>
+        <Route path="/" element={<ProductList addToCart={addToCart} />} />
+        <Route path="/cart" element={
+          <Cart 
+            cart={cart} 
+            updateQuantity={updateQuantity} 
+            removeFromCart={removeFromCart} 
+            clearCart={clearCart} 
+          />} 
+        />
+      </Routes>
     </>
   );
 }
-
